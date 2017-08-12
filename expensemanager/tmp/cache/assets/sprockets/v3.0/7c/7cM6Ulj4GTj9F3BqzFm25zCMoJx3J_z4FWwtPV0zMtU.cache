@@ -1,0 +1,27 @@
+{:uriI"|file://app/assets/images/readme.txt?type=text/plain&id=8b4bdfe05894b11a7337f44a9b5660a51babc7132aecc5fc7ab1530c9e1d51ff:ET:load_pathI"app/assets/images;T:filenameI"!app/assets/images/readme.txt;T:	nameI"readme;T:logical_pathI"readme.txt;T:content_typeI"text/plain;T:sourceI"Í----------------------------
+IMAGE DIRECTORY (/img)
+----------------------------
+
+This directory should contain all images used throughout the site.
+Images within the root are used by css as background images.
+
+----------------------------
+SUB DIRECTORIES
+----------------------------
+
+All other images to within logical sub-directories related to the section of the site they appear in. Maintaining this structure is optionally but recommended.
+
+----------------------------
+RECOMMENDED IMAGES SIZES
+----------------------------
+
+Blog: 800px w x flexible h
+Client logos: 120px w x 60px h
+Showcase: 600px w‚ÄÜ√ó‚ÄÜ330px h
+Slides: flexible but same height is recommended
+Team: 150px w x 150px
+Quotes: 90px w x 140px h (with transparent background);T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"4processors:type=text/plain&file_type=text/plain;TTI"/file-digest://app/assets/images/readme.txt;TTF:charsetI"
+utf-8;F:digest"%∞L †0QwÜ(ó·ﬂÛM=îﬂ%ÿÖÇWJßò∆Õ‹¢}‹:lengthiÍ:dependencies_digest"%¡_:˚îÚK-!Ú‚ÊeZÒ∂l±«çÀò◊r)óÈπ;/:idI"E8b4bdfe05894b11a7337f44a9b5660a51babc7132aecc5fc7ab1530c9e1d51ff;F:
+mtimel+zl0Y

@@ -1,0 +1,36 @@
+<h1> Incomes </h1>
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Income($)</th>
+	 <th>Income Category($)</th>
+      <th>Action</th>
+	 
+	  <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @incomes.each do |income| %>
+      <tr>
+        <td class="col-sm-3"><%= income.amount %></td>
+		<td class="col-sm-3"><%= income.icategory.try(:icname) %></td>
+        <td><%= link_to 'Edit', edit_income_path(income) %></td>
+		
+        <td><%= link_to 'Delete', income, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'Add a New Income', new_income_path %>
+<br>
+<%= link_to "Download PDF Report", { :action => "index", :format => :pdf }, target: '_blank'%>
+<br>
+<%= link_to "Download Bank Statement CSV File", { :action => "index", :format => :csv }, target: '_blank'%>
+<br>
+<%= link_to 'Home Page', :action => 'index', :controller => 'access'%>

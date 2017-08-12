@@ -1,0 +1,36 @@
+<h1> Expenses </h1>
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Expenses($)</th>
+	  <th>Expense Category($)</th>
+      <th>Action</th>
+	 
+	  <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @expenses.each do |expense| %>
+      <tr>
+        <td class="col-sm-3"><%= expense.amount %></td>
+		<td class="col-sm-3"><%= expense.category.try(:cname) %></td>
+        <td><%= link_to 'Edit', edit_expense_path(expense) %></td>
+		
+        <td><%= link_to 'Delete', expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'Add a New Expense', new_expense_path %>
+<br>
+<%= link_to "Download PDF", { :action => "index", :format => :pdf }, target: '_blank'%>
+<br>
+<%= link_to "Download CSV", { :action => "index", :format => :csv }, target: '_blank'%>
+<br>
+<%= link_to 'Home Page', :action => 'index', :controller => 'access'%>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Expensemanager</title>
+    <%= csrf_meta_tags %>
+	<link rel="shortcut icon" href="images/icons/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icons/114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icons/72x72.png">
+    <link rel="apple-touch-icon-precomposed" href="images/icons/default.png">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="fullscreen-centered page-register">
+  
+    <%= yield %>
+  </body>
+</html>

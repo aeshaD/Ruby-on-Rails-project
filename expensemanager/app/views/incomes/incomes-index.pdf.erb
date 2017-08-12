@@ -1,0 +1,13 @@
+<h1>Income Report</h1>
+
+<table class="table table-bordered">
+	<th>Amount</th>
+	<th>Date</th>
+	<% @incomes.each do |income| %>
+	  <tr>
+	    <td ><%= income.amount %></td>
+		<td ><%= income.icategory.try(:icname)  %></td>
+	    <td ><%= income.created_at.to_date %></td>
+	  </tr>
+	<% end %>
+</table>

@@ -1,0 +1,58 @@
+<div id="background-wrapper" class="benches" data-stellar-background-ratio="0.8">
+      
+      <!-- ======== @Region: #content ======== -->
+      <div id="content">
+        <div class="header">
+          <div class="header-inner">
+            <!--navbar-branding/logo - hidden image tag & site name so things like Facebook to pick up, actual logo set via CSS for flexibility -->
+            <a class="navbar-brand center-block" href="index.html" title="Home">
+              <h1 class="hidden">
+                
+				<%= image_tag("images/logo.png") %>
+                Flexor
+              </h1>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-sm-offset-3">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+					Edit Income Category
+                </h3>
+              </div>
+              <div class="panel-body">
+                <%= form_for(@icategory) do |f| %>
+				<fieldset>
+				<% if @icategory.errors.any? %>
+					<div id="error_explanation">
+					  <h2><%= pluralize(@icategory.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+					  <ul>
+					  <% @icategory.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					  <% end %>
+					  </ul>
+					</div>
+				  <% end %>
+				  
+				  <div class="form-group">
+                      <div class="input-group input-group-lg">
+							<div class="form-control">
+							  <%= f.label :IncomeCategoryName %>
+							  <%= f.text_field :icname %>
+							 </div>
+					  </div>
+                  </div>	
+				  <%= f.submit "Edit Income Category", class: "btn btn-primary" %>
+				  </fieldset>
+				<% end %>
+				
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /row -->
+      </div>
+    </div>

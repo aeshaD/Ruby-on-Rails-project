@@ -1,0 +1,32 @@
+<h1>Listing Categories</h1>
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+	 
+      <th>Action</th>
+	 
+	  <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td class="col-sm-3"><%= category.cname %></td>
+		
+        <td><%= link_to 'Edit', edit_category_path(category) %></td>
+		
+        <td><%= link_to 'Delete', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'Add a New Category', new_category_path %>
+<br>
+<%= link_to 'Home Page', :action => 'index', :controller => 'access'%>

@@ -1,0 +1,32 @@
+<h1>Listing Income Categories</h1>
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+	 
+      <th>Action</th>
+	 
+	  <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @icategories.each do |icategory| %>
+      <tr>
+        <td class="col-sm-3"><%= icategory.icname %></td>
+		
+        <td><%= link_to 'Edit', edit_icategory_path(icategory) %></td>
+		
+        <td><%= link_to 'Delete', icategory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'Add a New Income Category', new_icategory_path %>
+<br>
+<%= link_to 'Home Page', :action => 'index', :controller => 'access'%>
